@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+
+  <title>Frontend Mentor | IP Address Tracker</title>
+
+  <script src="./scripts/jquery.min.js"></script>
+  <link rel="stylesheet" href="./css/leaflet.css"
+    integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A==">
+  <script src="./scripts/leaflet.js"
+    integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA=="></script>
+
+  <link rel="shortcut icon" href="https://avatars0.githubusercontent.com/u/18008332?v=4" type="image/x-icon">
+  <link href="./css/css2.css" rel="stylesheet">
+  <link rel="stylesheet" type="text/css" href="./css/geral.css">
+
+  <link href="https://api.mapbox.com/mapbox-gl-js/v1.9.1/mapbox-gl.css" rel="stylesheet" />
+  <link href="https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-draw/v1.0.9/mapbox-gl-draw.css" rel="stylesheet" />
+
+  
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <style>
+    .attribution {
+      font-size: 11px;
+      text-align: center;
+    }
+
+    .attribution a {
+      color: hsl(228, 45%, 44%);
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- IP Address Tracker
+
+  Search for any IP address or domain
+
+  IP Address
+  Location
+  Timezone
+    UTC 
+  ISP -->
+
+  <header class="header">
+    <h1 class="title-h3 bold-400 padding-bottom-20">IP Address Tracker</h1>
+
+    <div class="search padding-bottom-40">
+      <input type="text" placeholder="Search for any IP address domain" id="search" value="192.241.244.201">
+      <button id="searching" class="btn"><img src="./images/icon-arrow.svg"></button>
+    </div>
+
+    <address class="address" id="address">
+      <div class="address__item">
+        <ul>
+          <li class="text-p  padding-bottom-10 bold-500">ip address</li>
+          <li class="title-h5 bold-500"><span id="ip"><img src="./images/progress.gif"
+                class="loading-progress">Waiting...</span></li>
+        </ul>
+      </div>
+      <div class="address__item">
+        <ul>
+          <li class="text-p  padding-bottom-10 bold-500">location</li>
+          <li class="title-h5 bold-500"><span id="location"><img src="./images/progress.gif"
+                class="loading-progress">Waiting...</span></li>
+        </ul>
+      </div>
+      <div class="address__item">
+        <ul>
+          <li class="text-p  padding-bottom-10 bold-500">Timezone</li>
+          <li class="title-h5 bold-500"><span id="timezone"><img src="./images/progress.gif"
+                class="loading-progress">Waiting...</span></li>
+        </ul>
+      </div>
+      <div class="address__item">
+        <ul>
+          <li class="text-p  padding-bottom-10 bold-500">isp</li>
+          <li class="title-h5 bold-500"><span id="isp"><img src="./images/progress.gif"
+                class="loading-progress">Waiting...</span>
+          </li>
+        </ul>
+      </div>
+    </address>
+  </header>
+
+  <div class="mapa" id="map">
+    <p>Waiting IP address...</p>
+  </div>
+
+  <script src="https://api.mapbox.com/mapbox-gl-js/v1.9.1/mapbox-gl.js"></script>
+  
+ 
+  <script src="https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-draw/v1.0.9/mapbox-gl-draw.js"></script>
+
+  <script src="./scripts/script.js"></script>
+
+  <div class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
+    Coded by <a target="_blank" href="https://rogergcc.github.io/">Roger</a>.
+  </div>
+</body>
+
+</html>
