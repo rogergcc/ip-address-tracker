@@ -44,10 +44,10 @@ app.get('/api/ip-location', async(req, res, next) => {
 
 app.post('/api/ip-location', async(req, res, next) => {
     // getIpLocation();
-    console.log("REQ Body Post mthd: ", req.body);
+    // console.log("REQ Body Post mthd: ", req.body);
     let host = req.query.host;
     // let limit = req.query.limit;
-    console.log("HOST POST : ", host);
+    console.log("HOST POST METHD: ", host);
     
     // res.send(getIpLocation());
     // res.send("HOLA from Node server.")

@@ -73,7 +73,7 @@ async function getLocation(host) {
 
 
 async function getIP() {
-    const api = `https://geo.ipify.org/api/v1?apiKey=at_XZ2V1IG3PPKxLr6Cfpda2e30d0lVY`;
+    const api = `https://api.ipify.org/?format=json`;
     let data;
     try {
         const response = await fetch(api);
@@ -145,7 +145,7 @@ document.addEventListener("DOMContentLoaded", async function (e) {
     errorIp.style.display = "none";
     let ipAddress = inputElement.value;
     ipAddress = ipAddress.trim();
-    //ipAddress = await getIP();
+    ipAddress = await getIP();
 
     findIpInMap(ipAddress);
 });
