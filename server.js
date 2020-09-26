@@ -6,7 +6,6 @@ const axios = require("axios");
 var apiLocation = require('./api/location');
 const path = require('path')
 
-const ipLocation = require("iplocation"); // ip location 
 
 
 // "body-parser": "^1.19.0",
@@ -58,11 +57,9 @@ app.post('/api/ip-location', async(req, res, next) => {
     } else {
       ipAddr = req.connection.remoteAddress;
     }
-    console.log("IP POST method not secury? : ", ipAddr);
 
-    const myIPClient =  await ipLocation("172.217.167.78");
-    console.log("IP LOCATION DEPEND :", myIPClient);
-
+    console.log("IP POST method not secure? : ", ipAddr);
+    host = (host=="")?ipAddr:host;
     console.log("HOST POST METHD: ", host);
     
     // res.send(getIpLocation());
@@ -71,7 +68,7 @@ app.post('/api/ip-location', async(req, res, next) => {
     res.send(datos)
 });
 
-async function getIpLocation(req, res) {
+async function getMyIp() {
     // const api = 'https://geo.ipify.org/api/v1?apiKey=at_kkV0RSKzsozxyqc3oIFGd6H5GY5ex&ipAddress=' + ipAddress;
     // const api = 'https://tools.keycdn.com/geo.json?host=' + ipAddress;
     // const api = "https://tools.keycdn.com/geo.json?host=''";
