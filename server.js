@@ -6,6 +6,9 @@ const axios = require("axios");
 var apiLocation = require('./api/location');
 const path = require('path')
 
+const ipLocation = require("ip-location"); // ip location 
+
+
 // "body-parser": "^1.19.0",
 dotenv.config();
 
@@ -47,6 +50,19 @@ app.post('/api/ip-location', async(req, res, next) => {
     // console.log("REQ Body Post mthd: ", req.body);
     let host = req.query.host;
     // let limit = req.query.limit;
+
+    var ipAddr = req.headers["x-forwarded-for"];
+    if (ipAddr){
+      var list = ipAddr.split(",");
+      ipAddr = list[list.length-1];
+    } else {
+      ipAddr = req.connection.remoteAddress;
+    }
+    console.log("IP POST method not secury? : ", ipAddr);
+
+    const ipLocation =  await ipLocation("172.217.167.78");
+    console.log("IP LOCATION DEPEND :", ipLocation);
+    
     console.log("HOST POST METHD: ", host);
     
     // res.send(getIpLocation());

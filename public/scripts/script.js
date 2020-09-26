@@ -145,8 +145,8 @@ document.addEventListener("DOMContentLoaded", async function (e) {
     errorIp.style.display = "none";
     let ipAddress = inputElement.value;
     ipAddress = ipAddress.trim();
-    ipAddress = await getIP();
-
+    //ipAddress = await getIP();
+    
     findIpInMap(ipAddress);
 });
 
