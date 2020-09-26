@@ -1,0 +1,162 @@
+body{
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    height: 100vh;
+}
+.header{
+    background-image: url(../images/pattern-bg.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    text-align: center;
+    padding: 30px 30px;
+}
+.header h1{
+    color:#fff;
+}
+.search{
+    display: flex;
+    justify-content: center;
+}
+.search input{
+    padding: 15px 20px;
+    border-top-left-radius:15px;
+    border-bottom-left-radius:15px;
+    outline: none;
+    border:none;
+    width: 100%;
+    max-width: 400px;
+}
+.search input::placeholder{
+ font-size: 14px;
+ color:var(--cor-1);
+}
+.search .btn{
+    padding:10px 20px;
+    border-top-right-radius:15px;
+    border-bottom-right-radius:15px;
+    border:0px;
+    background-color:var(--cor-2);
+    transition: 0.5 ease-in-out;
+    cursor: pointer;
+    outline: none;
+}
+.search .btn:hover{
+    opacity: .8;
+    background-color:var(--cor-4);
+}
+
+.address{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    background-color: #fff;
+    /* max-width: 960px; */
+    max-width: 75%;
+    margin: 40px auto;
+    border-radius: 15px;
+    padding: 30px 0px;
+    box-shadow: 0 1px 10px 0 rgba(32,33,36,0.5);
+    position: relative;
+    margin-bottom: -100px;
+    z-index: 1;
+}
+
+.address__item{
+    text-align: left;
+    padding: 0px 30px;
+}
+
+.address__item:nth-child(1n){
+    border-left:1px solid #f0f0f0;
+}
+.address__item:first-child{
+    border-left:0px ;
+}
+
+.address__item ul li:first-child{
+    color:var(--cor-1);
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    font-size: .7rem;
+}
+
+.mapa{
+    width: 100%;
+    z-index: 0;
+    flex: 1;
+    text-align: center;
+    padding:  30px;
+    padding-top: 150px;
+}
+
+#marker {
+    background-image: url('../images/icon-location.svg');
+    background-size: contain;
+    background-repeat: no-repeat;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    cursor: pointer;
+    }
+
+.loading-progress{
+    max-width: 25px;
+    display: block;
+    margin:20px;
+   
+}
+
+.attribution{
+    background-color: #272727;   
+    font-size: medium;
+    font-weight: 700;
+    color: #fff;
+    padding: 1rem;
+    text-align: center;
+}
+.attribution a {
+    color:hsl(0, 0%, 75%);
+}
+.error-ip{
+  display: none;
+  color: #f0f0f0;
+  background-color: #E91E63;
+  padding: 6px 10px;
+  border-radius: 3px;
+  font-size: 13px;
+  margin: .4em;
+}
+
+/*https://icons8.com/preloaders/*/
+@media (max-width:880px){
+    .address{
+        grid-template-columns: repeat(1, 1fr);
+        margin-bottom: -100px;
+        padding: 10px 0;
+    }
+
+    .address__item{
+        text-align: center;
+        padding:7px 30px;
+    }
+    .address__item .text-p{
+      
+      padding-bottom:2px ;
+    }
+      
+    .loading-progress{
+        
+        display: block;
+        margin:5px auto;
+    }
+    .mapa{
+        padding: 150px 30px;
+    }
+    .attribution,#search{
+      font-size: small;
+    }
+    
+    
+}
+
