@@ -60,8 +60,8 @@ app.post('/api/ip-location', async(req, res, next) => {
     }
     console.log("IP POST method not secury? : ", ipAddr);
 
-    const ipLocation =  await ipLocation("172.217.167.78");
-    console.log("IP LOCATION DEPEND :", ipLocation);
+    const myIPClient =  await ipLocation("172.217.167.78");
+    console.log("IP LOCATION DEPEND :", myIPClient);
 
     console.log("HOST POST METHD: ", host);
     
