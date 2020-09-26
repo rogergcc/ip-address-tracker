@@ -6,7 +6,7 @@ const axios = require("axios");
 var apiLocation = require('./api/location');
 const path = require('path')
 
-const ipLocation = require("ip-location"); // ip location 
+const ipLocation = require("iplocation"); // ip location 
 
 
 // "body-parser": "^1.19.0",
@@ -62,7 +62,7 @@ app.post('/api/ip-location', async(req, res, next) => {
 
     const ipLocation =  await ipLocation("172.217.167.78");
     console.log("IP LOCATION DEPEND :", ipLocation);
-    
+
     console.log("HOST POST METHD: ", host);
     
     // res.send(getIpLocation());
