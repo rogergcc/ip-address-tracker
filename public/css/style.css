@@ -132,14 +132,14 @@ body{
 @media (max-width:880px){
     .address{
         grid-template-columns: repeat(1, 1fr);
-        margin-bottom: -100px;
-        padding: 14px 0;
+        margin-bottom: -150px;
+        padding: 12px 0;
         max-width: 100%;
     }
 
     .address__item{
         text-align: center;
-        padding:14px 30px;
+        padding:12px 30px;
     }
     .address__item ul li:first-child{
       font-size: 12px;
@@ -158,8 +158,11 @@ body{
       font-size: 16px;
     }
     
-    .title-h6 {
-        font-size: var(--font-size-18);
+    li.title-h6.bold-500 {
+        font-size: 19px;
+    }
+    h1.title-h3.bold-400.padding-bottom-20{
+        font-size: 24px;
     }
 }
 
