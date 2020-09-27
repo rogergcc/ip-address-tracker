@@ -110,7 +110,7 @@ async function findIpInMap(ipAddress) {
     location += region_code + ', ' + region_name + '-' + country_name;
 
 
-    mapboxgl.accessToken = 'pk.eyJ1Ijoicm9nZXJnY2MiLCJhIjoiY2swNjBxZjdoMDB4OTNkbzdwZDRyd3Y2cCJ9.IAhPr1E2_-V8CqMc-zILDg';
+    mapboxgl.accessToken = 'pk.eyJ1Ijoicm9nZXJnY2MiLCJhIjoiY2tkeGVkNndpMzIyaTJzbWg1Y2lzNzZ6YSJ9.oy-cMIwVOHEdKZ78llmTEQ';
     var map = new mapboxgl.Map({
         container: 'map',
         style: 'mapbox://styles/mapbox/streets-v11',
