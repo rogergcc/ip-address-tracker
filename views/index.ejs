@@ -9,15 +9,25 @@
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
 
   <title>Frontend Mentor | IP Address Tracker</title>
-  
+
   <!-- <link rel="shortcut icon" href="https://avatars0.githubusercontent.com/u/18008332?v=4" type="image/x-icon"> -->
   <link href="./css/css2.css" rel="stylesheet">
   <link rel="stylesheet" type="text/css" href="./css/generics.css">
 
 
   <link href="https://api.mapbox.com/mapbox-gl-js/v1.12.0/mapbox-gl.css" rel="stylesheet" />
-  
-  
+
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-116205509-2"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
+
+    gtag('config', 'UA-116205509-2');
+  </script>
+
+
 </head>
 
 <body>
@@ -35,12 +45,12 @@
   <header class="header">
     <h1 class="title-h3 bold-400 padding-bottom-20">IP Address Tracker</h1>
 
-    <div id="search-container"class="search">
-      <input type="text" placeholder="Search for any IP address domain" id="search" >
+    <div id="search-container" class="search">
+      <input type="text" placeholder="Search for any IP address domain" id="search">
       <button id="searching" class="btn"><img src="./images/icon-arrow.svg"></button>
     </div>
 
-    <div id="error-ip" class="error-ip" >
+    <div id="error-ip" class="error-ip">
       You have entered an invalid IP address!
     </div>
 
@@ -81,9 +91,9 @@
     <p>Waiting IP address...</p>
   </div>
 
-  
+
   <script src="https://api.mapbox.com/mapbox-gl-js/v1.12.0/mapbox-gl.js"></script>
- 
+
 
   <script src="./scripts/script.js"></script>
 
