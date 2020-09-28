@@ -86,6 +86,7 @@
    --font-size-56:3.5em;/*56px*/
   
    --line-height:1.4em;
+   --transition: 300ms ease-in-out;
   }
   
    /* Font family */

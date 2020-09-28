@@ -41,6 +41,7 @@ body{
     transition: 0.5 ease-in-out;
     cursor: pointer;
     outline: none;
+    transition: var(--transition) background-color;
 }
 .search .btn:hover{
     opacity: .8;

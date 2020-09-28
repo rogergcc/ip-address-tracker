@@ -46,8 +46,9 @@
     <h1 class="title-h3 bold-400 padding-bottom-20">IP Address Tracker</h1>
 
     <div id="search-container" class="search">
-      <input type="text" placeholder="Search for any IP address domain" id="search">
-      <button id="searching" class="btn"><img src="./images/icon-arrow.svg"></button>
+      <label class="error-ip" for="ip-address">IP address or domain</label>
+      <input type="text" placeholder="Search for any IP address domain" id="search" name="ip-address">
+      <button title="Search Ip Address" id="searching" class="btn"><img src="./images/icon-arrow.svg" alt="search-button" ></button>
     </div>
 
     <div id="error-ip" class="error-ip">
