@@ -32,17 +32,17 @@ const middleware = (req, res, next) => {
 app.use(cors());
 // app.use(middleware);
 
-app.get('/api/ip-location', async(req, res, next) => {
-    // getIpLocation();
-    let host = req.query.host;
-    // let limit = req.query.limit;
-    console.log("HOST: ", req.headers['x-forwarded-for'] || req.connection.remoteAddress);
+// app.get('/api/ip-location', async(req, res, next) => {
+//     // getIpLocation();
+//     let host = req.query.host;
+//     // let limit = req.query.limit;
+//     console.log("HOST: ", req.headers['x-forwarded-for'] || req.connection.remoteAddress);
     
-    // res.send(getIpLocation());
-    // res.send("HOLA from Node server.")
-    var datos = await apiLocation.getLocation(host);
-    res.send(datos)
-});
+//     // res.send(getIpLocation());
+//     // res.send("HOLA from Node server.")
+//     var datos = await apiLocation.getLocation(host);
+//     res.send(datos)
+// });
 
 app.post('/api/ip-location', async(req, res, next) => {
     // getIpLocation();
@@ -58,7 +58,10 @@ app.post('/api/ip-location', async(req, res, next) => {
       ipAddr = req.connection.remoteAddress;
     }
 
-    console.log("IP POST method not secure? : ", ipAddr);
+    console.log("REQU CONNEC ADRESS : ", req.connection.remoteAddress);
+    
+
+    console.log("IP POST method not secure? ipAddr: ", ipAddr);
     host = (host=="")?ipAddr:host;
     console.log("HOST POST METHD: ", host);
     
@@ -95,7 +98,7 @@ const PORT = process.env.PORT;
 app.listen(PORT, () => {
 
     console.log(`Server listening on port ${PORT}`);
-    console.log(`localhost:${PORT}`);
+    console.log(`http://localhost:${PORT}`);
 });
 
 // Heroku git steps deploy
