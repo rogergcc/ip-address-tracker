@@ -54,7 +54,7 @@ module.exports = {
             //     }
             
             data = {
-                "host": data.ip,
+                "host": data.query,
                 "country_name": data.country,
                 "region_code": data.countryCode,
                 "region_name": data.regionName,
